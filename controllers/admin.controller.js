@@ -1,3 +1,4 @@
+import jwt from 'jsonwebtoken';
 export const adminLogincontroller =  (request, response) => {
     const { adminId, password } = request.body
     if (adminId === process.env.ADMIN_ID && password === process.env.ADMIN_PASSWORD) {
