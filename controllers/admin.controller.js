@@ -9,5 +9,12 @@ export const adminLogincontroller =  (request, response) => {
                 success: true,
                 token
             })
+    }else {
+        response
+            .status(401)
+            .send({
+                message: "invalid credentials",
+                success: false
+            })
     }
 }
