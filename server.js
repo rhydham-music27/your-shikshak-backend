@@ -7,6 +7,7 @@ import morgan from 'morgan';
 import formRouter from './routes/form.routes.js';
 import { TutorFormModel } from './models/tutorform.model.js';
 import jwt from 'jsonwebtoken';
+import adminRouter from './routes/admin.route.js';
 
 config()
 connectDb()
@@ -26,7 +27,7 @@ app.get('/', (request, response) => {
         })
 })
 app.use('/form', formRouter)
-
+app.use('/admin',adminRouter)
 
 app.listen(3000, () => {
     console.log(`server is running on ${3000}`);
