@@ -13,9 +13,7 @@ config()
 connectDb()
 
 const app = express()
-app.use(cors({
-    origin: ''
-}))
+app.use(cors())
 app.use(express.json())
 app.use(morgan('dev'))
 app.get('/', (request, response) => {
